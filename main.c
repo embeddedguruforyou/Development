@@ -18,6 +18,7 @@ void display(struct m_owners x)
 }
 void main()
 {
+    printf("veerenrea program\n");
 	struct m_owners own1,own2;
 	list(&own1);
 	display(own1);
