@@ -1,0 +1,18 @@
+name: C-Build-CI
+
+on:
+  push:
+    branches: [ "main", "feature/setup-build" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Compile Code
+        run: gcc -g -Wall main.c -o my_app
+
+      - name: Test Execution
+        run: ./my_app
